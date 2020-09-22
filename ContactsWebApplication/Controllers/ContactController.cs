@@ -54,13 +54,19 @@ namespace ContactsWebApplication.Controllers
             {
                 return BadRequest();
             }
-            var item = Contacts.Find(id);
+            var item = Contacts.Find(id);  
             if (item == null)
             {
                 return NotFound();
             }
             Contacts.Update(contact);
             return new NoContentResult();
+        }
+
+        [HttpDelete("{id}")]
+        public void Delete(string id)
+        {
+            Contacts.Remove(id);
         }
 
     }

@@ -22,5 +22,25 @@ namespace ContactBook.Views
         {
             InitializeComponent();
         }
+
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
+        //    for (int i = 0; i < VisualTreeHelper.GetChildrenCount(this.DetailStackPanel); i++)
+        //    {
+        //        Grid grid = VisualTreeHelper.GetChild(this.DetailStackPanel, i) as Grid;
+        //        if (grid != null)
+        //        {
+        //            for (int j = 0; j < VisualTreeHelper.GetChildrenCount(this.DetailsGrid); j++)
+        //            {
+        //                TextBox txtBox = VisualTreeHelper.GetChild(this.DetailsGrid, j) as TextBox;
+        //                if (txtBox != null)
+        //                {
+        //                    txtBox.Text = string.Empty;
+        //                }
+        //            }
+        //            //txt.Text = string.Empty;
+        //        }
+        //    }
+        //}
     }
 }

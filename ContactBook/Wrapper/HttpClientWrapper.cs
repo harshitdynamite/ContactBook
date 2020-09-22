@@ -21,5 +21,19 @@ namespace ContactBook.Wrapper
                 };
             }
         }
+
+        public ResponseWrapper Delete(string id)
+        {
+            string requestUri = "https://localhost:44344/Contact/" + id;
+            using (var httpClient = new HttpClient())
+            {
+                HttpResponseMessage httpResponse = httpClient.DeleteAsync(requestUri).Result;
+                return new ResponseWrapper()
+                {
+                    StatusCode = httpResponse.StatusCode,
+                    Content = httpResponse.Content.ReadAsStringAsync().Result
+                };
+            }
+        }
     }
 }

@@ -15,10 +15,19 @@ namespace ContactsWebApplication.Models
             Add(new Contact()
             {
                 FirstName = "James",
-                LastName = "",
+                LastName = "Gnau",
                 DOB = DateTime.Now,
                 Email = new List<string>() { "abc@gmail.com", "def@gmail.com" },
                 PhoneNos = new List<string> { "123456", "456789" }
+            });
+
+            Add(new Contact()
+            {
+                FirstName = "Mike",
+                LastName = "Voiles",
+                DOB = DateTime.Now,
+                Email = new List<string>() { "abcd@gmail.com", "defd@gmail.com" },
+                PhoneNos = new List<string> { "78123456", "99456789" }
             });
         }
         public void Add(Contact contact)
