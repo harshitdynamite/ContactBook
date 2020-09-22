@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace ContactBook.Views
 {
     /// <summary>
-    /// Interaction logic for ViewEditContact.xaml
+    /// Interaction logic for AddContactView.xaml
     /// </summary>
-    public partial class DetailEditContactView : UserControl
+    public partial class AddContactView : UserControl
     {
-        public DetailEditContactView()
+        public AddContactView()
         {
             InitializeComponent();
         }

@@ -7,7 +7,7 @@ using System.ComponentModel;
 
 namespace ContactBook.ViewModel
 {
-    public class ContactListViewModel : INotifyPropertyChanged
+    public class ContactListViewModel : BindableBase, INotifyPropertyChanged
     {
         private HttpClientWrapper _client = new HttpClientWrapper();
 
