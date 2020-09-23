@@ -80,8 +80,6 @@
             <Button Content="Delete Contact" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" 
                     Command="{Binding DeleteCommand}"
                     />
-            <Button Content="Add Contact" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" 
-                    />
         </StackPanel>
     </Grid>
 </UserControl>
