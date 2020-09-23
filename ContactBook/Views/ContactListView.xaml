@@ -40,7 +40,7 @@
                         DisplayMemberBinding="{Binding DOB}" />
                     <GridViewColumn Header="Emails"
                       Width="Auto"
-                        DisplayMemberBinding="{Binding Email}" />
+                        DisplayMemberBinding="{Binding Path=Email}" />
                     <GridViewColumn Header="Phone nos"
                       Width="Auto"
                         DisplayMemberBinding="{Binding PhoneNos}" />
@@ -70,9 +70,9 @@
                 <Label Grid.Row="3" Grid.Column="0" Content="Date of Birth"/>
                 <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding DOB, UpdateSourceTrigger=PropertyChanged}"/>
                 <Label Grid.Row="4" Grid.Column="0" Content="Email"/>
-                <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Email, UpdateSourceTrigger=PropertyChanged}"/>
+                <ListBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding Path=Email, UpdateSourceTrigger=PropertyChanged}"/>
                 <Label Grid.Row="5" Grid.Column="0" Content="Phone no"/>
-                <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding PhoneNos, UpdateSourceTrigger=PropertyChanged}"/>
+                <ListBox Grid.Row="5" Grid.Column="1" ItemsSource="{Binding Path=PhoneNos, UpdateSourceTrigger=PropertyChanged}"/>
             </Grid>
 
         </StackPanel>
