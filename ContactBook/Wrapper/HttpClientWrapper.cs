@@ -35,5 +35,29 @@ namespace ContactBook.Wrapper
                 };
             }
         }
+
+        public ResponseWrapper Post(string content)
+        {
+            string requestUri = "https://localhost:44344/Contact/";
+            using (var httpClient = new HttpClient())
+            {
+                HttpResponseMessage httpResponse = null;
+                if (content != null)
+                {
+                    using (var postContent = new StringContent(content))
+                    {
+                        postContent.Headers.Clear();
+                        postContent.Headers.Add("Content-Type", "application/json");
+                        httpResponse = httpClient.PostAsync(requestUri, postContent).Result;
+                    }
+                }
+                
+                return new ResponseWrapper()
+                {
+                    StatusCode = httpResponse.StatusCode,
+                    Content = httpResponse.Content.ReadAsStringAsync().Result
+                };
+            }
+        }
     }
 }

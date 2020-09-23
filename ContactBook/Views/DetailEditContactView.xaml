@@ -16,17 +16,17 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
 
         <Label Content="First Name" Grid.Row="0" Grid.Column="0"></Label>
-        <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Contact.FirstName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10 0 10 10"></TextBox>
 
         <Label Content="Last Name" Grid.Row="1" Grid.Column="0"></Label>
-        <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Contact.LastName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10 0 10 10"></TextBox>
 
         <Label Content="Date of Birth" Grid.Row="2" Grid.Column="0"></Label>
-        <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Contact.DOB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="10 0 10 10"></TextBox>
 
         <Label Content="Emails" Grid.Row="3" Grid.Column="0"></Label>
         <ListBox Grid.Row="3" Grid.Column="1"></ListBox>
