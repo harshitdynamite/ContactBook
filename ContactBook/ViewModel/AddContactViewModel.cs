@@ -1,5 +1,5 @@
-﻿using ContactBook.Models;
-using ContactBook.Wrapper;
+﻿using ContactBook.Commons.Wrapper;
+using ContactBook.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;

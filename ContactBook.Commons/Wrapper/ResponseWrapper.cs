@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 
-namespace ContactBook.Wrapper
+namespace ContactBook.Commons.Wrapper
 {
     public class ResponseWrapper
     {

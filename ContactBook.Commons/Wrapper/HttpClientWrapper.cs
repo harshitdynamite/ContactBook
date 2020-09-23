@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
 using System.Text;
 
-namespace ContactBook.Wrapper
+namespace ContactBook.Commons.Wrapper
 {
     public class HttpClientWrapper
     {
@@ -51,7 +50,7 @@ namespace ContactBook.Wrapper
                         httpResponse = httpClient.PostAsync(requestUri, postContent).Result;
                     }
                 }
-                
+
                 return new ResponseWrapper()
                 {
                     StatusCode = httpResponse.StatusCode,

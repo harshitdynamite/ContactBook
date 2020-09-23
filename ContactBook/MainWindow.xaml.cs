@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore;
+﻿using ContactBook.Commons;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -27,33 +28,33 @@ namespace ContactBook
     {
         public MainWindow()
         {
-            StartApiServer();
+            StartApiServer.PowerUpApiServer();
             InitializeComponent();
         }
 
-        public static IWebHost BuildApiWebHost(string[] args)
-        {
-            return WebHost.CreateDefaultBuilder(args).ConfigureAppConfiguration((hostingContext, config) =>
-            {
-                config.SetBasePath(Directory.GetCurrentDirectory());
-                config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-            }).CaptureStartupErrors(true).UseUrls("https://localhost:44344/").UseKestrel()
-            .UseStartup<ContactsWebApplication.Startup>()
-            .Build();
-        }
+        //public static IWebHost BuildApiWebHost(string[] args)
+        //{
+        //    return WebHost.CreateDefaultBuilder(args).ConfigureAppConfiguration((hostingContext, config) =>
+        //    {
+        //        config.SetBasePath(Directory.GetCurrentDirectory());
+        //        config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+        //    }).CaptureStartupErrors(true).UseUrls("https://localhost:44344/").UseKestrel()
+        //    .UseStartup<ContactsWebApplication.Startup>()
+        //    .Build();
+        //}
 
-        public static void StartApiServer()
-        {
-            string[] args = new string[0];
-            var apiHost = BuildApiWebHost(args);
-            var serverThread = new Thread(new ThreadStart(() =>
-            {
-                apiHost.Run();
-            }));
-            serverThread.IsBackground = true;
-            serverThread.Start();
-            Thread.Sleep(5000);
+        //public static void StartApiServer()
+        //{
+        //    string[] args = new string[0];
+        //    var apiHost = BuildApiWebHost(args);
+        //    var serverThread = new Thread(new ThreadStart(() =>
+        //    {
+        //        apiHost.Run();
+        //    }));
+        //    serverThread.IsBackground = true;
+        //    serverThread.Start();
+        //    Thread.Sleep(5000);
             
-        }
+        //}
     }
 }
